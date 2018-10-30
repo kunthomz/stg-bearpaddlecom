@@ -1,2 +1,2 @@
-# JupiterX Child Theme
 # jupiterx-child
+Jupiter X Child Theme
