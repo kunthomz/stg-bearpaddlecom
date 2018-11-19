@@ -8,7 +8,7 @@ require_once( get_template_directory() . '/lib/init.php' );
  *
  * Add theme style and script to Jupiter X assets files.
  */
-// jupiterx_add_smart_action( 'wp_enqueue_scripts', 'jupiterx_child_enqueue_scripts', 8 );
+jupiterx_add_smart_action( 'wp_enqueue_scripts', 'jupiterx_child_enqueue_scripts', 8 );
 
 function jupiterx_child_enqueue_scripts() {
 
