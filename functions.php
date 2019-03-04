@@ -1,11 +1,5 @@
 <?php
 
-add_action( 'after_setup_theme', 'jupiterx_child_i18n' );
-
-function jupiterx_child_i18n() {
-	load_child_theme_textdomain( 'jupiterx', get_stylesheet_directory() . '/languages' );
-}
-
 // Include Jupiter X.
 require_once( get_template_directory() . '/lib/init.php' );
 
