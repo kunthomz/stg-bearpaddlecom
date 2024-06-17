@@ -60,6 +60,7 @@ function jupiterx_setup_document() {
  * Modify the sub footer credit text.
  */
 // jupiterx_add_smart_action( 'jupiterx_subfooter_credit_text_output', 'jupiterx_child_modify_subfooter_credit' );
+require_once(get_template_directory() . '/lib/init.php');
 
 function jupiterx_child_modify_subfooter_credit() { ?>
 

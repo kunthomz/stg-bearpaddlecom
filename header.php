@@ -10,11 +10,15 @@
  * @link   https://artbees.net
  * @package JupiterX\Framework
  */
-require_once('functions_SDM.php');
+?>
+
+<?php 
+
 jupiterx_load_default_template( __FILE__ );
+
 if(is_front_page() || is_singular( 'post' ) || is_archive()){
 	
 }else{
 	echo do_shortcode("[elementor-template id='33821']");
 }
-
+?>
