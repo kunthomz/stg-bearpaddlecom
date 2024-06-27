@@ -1,0 +1,15 @@
+/* ---------------------------   OVERIDE JUPITER CSS ---------------------- */
+.single-location  .container{
+    max-width: 100%;
+}
+.single-location .jupiterx-main-header {
+    display: none !important;
+}
+.single-location .jupiterx-main-content {
+    padding: 0 0;
+    word-wrap: break-word;
+}
+.jupiterx-main-content > .container > .row > [class*=col-] {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
