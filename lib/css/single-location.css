@@ -1,11 +1,12 @@
+
 /* ---------------------------   OVERIDE JUPITER CSS ---------------------- */
-.single-location  .container{
+.parent-pageid-36779 .container{
     max-width: 100%;
 }
-.single-location .jupiterx-main-header {
+.parent-pageid-36779 .jupiterx-main-header, .header-curve{
     display: none !important;
 }
-.single-location .jupiterx-main-content {
+.parent-pageid-36779 .jupiterx-main-content {
     padding: 0 0;
     word-wrap: break-word;
 }
@@ -13,3 +14,56 @@
     padding-right: 0 !important;
     padding-left: 0 !important;
 }
+.testimonial-location .jet-testimonials__item-inner  {
+    background-color: #EEEEEE !important;
+    position: relative;
+    border-radius: 10px;
+    padding-bottom: 23px;
+}
+.testimonial-location .jet-testimonials__comment{
+    background-color: #EEEEEE !important;
+}
+.jet-testimonials__item:before {
+    content: '';
+    display: block;
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    background-image: url('https://staging-bearpaddlecom.kinsta.cloud/wp-content/uploads/2024/06/BP-ipaw-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto -15px; /* Centers horizontally and adjusts bottom margin */
+    z-index: 999;
+}
+/* ---------------------------  GLOBAL CSS ---------------------- */
+.elementor-element.elementor-element-09324e8.curve.elementor-widget.elementor-widget-html {
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+    width: 100%;
+    bottom: -185px;
+}
+.curve svg {
+    width: 100%;
+    height: auto;
+}
+.curve.blue-svg{
+    margin-bottom: -11px !important;
+}
+.remove-padding .elementor-column-gap-default>.elementor-column>.elementor-element-populated{
+    padding: 0;
+}
+#skyblue svg , #skyblue-bottom .svg-path{
+    fill: #D8EFF6 !important;
+}
+#skyblue-bottom svg{
+    margin-top: -19px;
+    z-index: -1;
+}
+
+/* ---------------------------   HERO BANNER CSS ---------------------- */
+.section-banner {
+    position: relative;
+}
+
+

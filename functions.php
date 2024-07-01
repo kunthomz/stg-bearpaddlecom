@@ -123,14 +123,19 @@ function wpc_elementor_shortcode( $atts ) {
 }
 add_shortcode('sitemap_code', 'wpc_elementor_shortcode');
 
+add_shortcode('sitemap_code', 'wpc_elementor_shortcode');
+
 add_action('wp_enqueue_scripts', 'add_theme_script_and_styles');
 function add_theme_script_and_styles() {
+    global $post; // Declare $post globally
+
     wp_enqueue_style('owlcarousel-styles', get_template_directory_uri() . '/lib/assets/dist/css/owl.carousel.min.css', array(), '1', 'screen');
     wp_register_script('owlcarousel-script', get_template_directory_uri() . '/lib/assets/dist/js/owl.carousel.min.js', '', '', true); // Load in footer
 
     wp_enqueue_script('owlcarousel-script');
 
-    if (is_singular('location')) {
+    if ( isset($post) && $post->post_parent === 36779 ) { // Check if $post is set
         wp_enqueue_style('single-location-styles', get_template_directory_uri() . '/lib/css/single-location.css', array(), '1', 'screen');
     }
 }
+
