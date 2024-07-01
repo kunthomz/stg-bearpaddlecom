@@ -35,10 +35,10 @@
     margin: 0 auto -15px; /* Centers horizontally and adjusts bottom margin */
     z-index: 999;
 }
+
 /* ---------------------------  GLOBAL CSS ---------------------- */
 .elementor-element.elementor-element-09324e8.curve.elementor-widget.elementor-widget-html {
-    position: absolute;
-    bottom: -19px;   
+    position: absolute;  
     left: 0;
     width: 100%;
     bottom: -185px;
@@ -60,10 +60,26 @@
     margin-top: -19px;
     z-index: -1;
 }
-
+.jet-testimonial__prev-arrow-a6e8457.jet-arrow.prev-arrow.slick-arrow.slick-hidden {
+    position: absolute;
+    left: -58px;
+}
+.jet-testimonial__next-arrow-a6e8457.jet-arrow.next-arrow.slick-arrow.slick-hidden {
+    position: absolute;
+    right: -37px;
+}
 /* ---------------------------   HERO BANNER CSS ---------------------- */
 .section-banner {
     position: relative;
 }
 
 
+
+@media (max-width:1024px) {
+.elementor-element.elementor-element-09324e8.curve.elementor-widget.elementor-widget-html {
+        bottom: -159px !important;
+}
+.section-banner {
+    margin-top: -84px !important;
+}
+}
