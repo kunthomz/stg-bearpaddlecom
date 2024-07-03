@@ -134,7 +134,7 @@ function add_theme_script_and_styles() {
 
     wp_enqueue_script('owlcarousel-script');
 
-    if ( isset($post) && $post->post_parent === 36779 ) { // Check if $post is set
+    if ( isset($post) && $post->post_parent === 895 ) { // Check if $post is set
         wp_enqueue_style('single-location-styles', get_template_directory_uri() . '/lib/css/single-location.css', array(), '1', 'screen');
     }
 }

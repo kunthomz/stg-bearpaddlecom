@@ -1,6 +1,6 @@
 
 /* ---------------------------   OVERIDE JUPITER CSS ---------------------- */
-.parent-pageid-36779 .container{
+.parent-pageid-895 .container{
     max-width: 100%;
 }
 .parent-pageid-36779 .jupiterx-main-header, .header-curve{
@@ -37,11 +37,11 @@
 }
 
 /* ---------------------------  GLOBAL CSS ---------------------- */
-.elementor-element.elementor-element-09324e8.curve.elementor-widget.elementor-widget-html {
-    position: absolute;  
-    left: 0;
-    width: 100%;
-    bottom: -185px;
+.curve.elementor-widget.elementor-widget-html {
+    position: absolute !important;  
+    left: 0 !important;
+    width: 100% !important;
+    bottom: -185px !important;
 }
 .curve svg {
     width: 100%;
