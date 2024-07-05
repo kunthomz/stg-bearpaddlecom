@@ -68,6 +68,9 @@
     position: absolute;
     right: -37px;
 }
+.card-section-loop h2{
+    font-size: 18px !important;
+}
 /* ---------------------------   HERO BANNER CSS ---------------------- */
 .section-banner {
     position: relative;
@@ -76,8 +79,8 @@
 
 
 @media (max-width:1024px) {
-.elementor-element.elementor-element-09324e8.curve.elementor-widget.elementor-widget-html {
-        bottom: -159px !important;
+.curve.elementor-widget.elementor-widget-html {
+    bottom: -161px !important;
 }
 .section-banner {
     margin-top: -84px !important;
