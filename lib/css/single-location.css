@@ -78,16 +78,7 @@
 
 
 
-@media (max-width:1024px) {
-.curve.elementor-widget.elementor-widget-html {
-    bottom: -161px !important;
-}
-.section-banner {
-    margin-top: -84px !important;
-}
-}
-
-@media (max-width:780px) {
+@media (max-width:1280px) {
     .testimonial-location .jet-testimonials__item-inner {
         width: 80%  !important;
         margin: auto !important;
@@ -98,4 +89,17 @@
     .jet-testimonials .jet-arrow.next-arrow {
         right: -4px !important;
     }
+}
+@media (max-width:1024px) {
+.curve.elementor-widget.elementor-widget-html {
+    bottom: -161px !important;
+}
+.section-banner {
+    margin-top: -84px !important;
+}
+
+}
+
+@media (max-width:780px) {
+
 }
