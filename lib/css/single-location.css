@@ -86,3 +86,16 @@
     margin-top: -84px !important;
 }
 }
+
+@media (max-width:780px) {
+    .testimonial-location .jet-testimonials__item-inner {
+        width: 80%  !important;
+        margin: auto !important;
+    }
+    .jet-testimonials .jet-arrow.prev-arrow {
+        left: -2px !important;
+    }
+    .jet-testimonials .jet-arrow.next-arrow {
+        right: -4px !important;
+    }
+}
