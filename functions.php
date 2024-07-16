@@ -136,6 +136,129 @@ function add_theme_script_and_styles() {
 
     if ( isset($post) && $post->post_parent === 895 ) { // Check if $post is set
         wp_enqueue_style('single-location-styles', get_template_directory_uri() . '/lib/css/single-location.css', array(), '1', 'screen');
+   		wp_enqueue_script('single-location-js', get_template_directory_uri() . '/lib/js/single-location.js', array(), '1', true);
+		   wp_enqueue_script('single-location-js');
+    	wp_enqueue_script('animejs', 'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js', array(), '2.2.0', true);
     }
 }
+
+function acf_double_group_shortcode() {
+    ob_start(); // Start output buffering
+
+    // Define the ACF group field names
+    $group_1 = 'group_1'; // Replace with your actual group 1 field name
+    $group_2 = 'group_2'; // Replace with your actual group 2 field name
+    $group_3 = 'group_3'; // Replace with your actual group 3 field name
+    $group_4 = 'group_4'; // Replace with your actual group 4 field name
+    $group_5 = 'group_5'; // Replace with your actual group 5 field name
+
+    // Display Group 1
+    if (have_rows($group_1)): ?>
+        <div class="acf-group group-1">
+            <?php while (have_rows($group_1)): the_row(); ?>
+                <div class="acf-item" style="display: flex;">
+                    <div class="acf-image" style="flex: 1;">
+                        <?php 
+                        $image = get_sub_field('image');
+                        if ($image): ?>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <?php endif; ?>
+                    </div>
+                    <div class="acf-text" style="flex: 2;">
+                        <h2><?php the_sub_field('title'); ?></h2>
+                        <div><?php the_sub_field('content'); ?></div>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    <?php endif;
+
+    // Display Group 2
+    if (have_rows($group_2)): ?>
+        <div class="acf-group">
+            <?php while (have_rows($group_2)): the_row(); ?>
+                <div class="acf-item" style="display: flex; flex-direction: row-reverse;">
+                    <div class="acf-image" style="flex: 1;">
+                        <?php 
+                        $image = get_sub_field('image');
+                        if ($image): ?>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <?php endif; ?>
+                    </div>
+                    <div class="acf-text" style="flex: 2;">
+                        <h2><?php the_sub_field('title'); ?></h2>
+                        <div><?php the_sub_field('content'); ?></div>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    <?php endif;
+
+    // Display Group 3
+if (have_rows($group_3)): ?>
+    <div class="acf-group">
+        <?php while (have_rows($group_3)): the_row(); ?>
+            <div class="acf-item" style="display: flex;">
+                <div class="acf-image" style="flex: 1;">
+                    <?php 
+                    $image = get_sub_field('image');
+                    if ($image): ?>
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <?php endif; ?>
+                </div>
+                <div class="acf-text" style="flex: 2;">
+                    <h2><?php the_sub_field('title'); ?></h2>
+                    <div><?php the_sub_field('content'); ?></div>
+                </div>
+            </div>
+        <?php endwhile; ?>
+    </div>
+<?php endif;
+
+    // Display Group 4
+    if (have_rows($group_4)): ?>
+        <div class="acf-group">
+            <?php while (have_rows($group_4)): the_row(); ?>
+                <div class="acf-item" style="display: flex; flex-direction: row-reverse;">
+                    <div class="acf-image" style="flex: 1;">
+                        <?php 
+                        $image = get_sub_field('image');
+                        if ($image): ?>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <?php endif; ?>
+                    </div>
+                    <div class="acf-text" style="flex: 2;">
+                        <h2><?php the_sub_field('title'); ?></h2>
+                        <div><?php the_sub_field('content'); ?></div>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    <?php endif;
+
+    // Display Group 5
+		if (have_rows($group_5)): ?>
+			<div class="acf-group">
+				<?php while (have_rows($group_5)): the_row(); ?>
+					<div class="acf-item" style="display: flex;">
+						<div class="acf-image" style="flex: 1;">
+							<?php 
+							$image = get_sub_field('image');
+							if ($image): ?>
+								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+							<?php endif; ?>
+						</div>
+						<div class="acf-text" style="flex: 2;">
+							<h2><?php the_sub_field('title'); ?></h2>
+							<div><?php the_sub_field('content'); ?></div>
+						</div>
+					</div>
+				<?php endwhile; ?>
+			</div>
+		<?php endif;
+
+
+    return ob_get_clean(); // Return the buffered content
+}
+add_shortcode('acf_double_group', 'acf_double_group_shortcode');
 

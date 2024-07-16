@@ -1,4 +1,33 @@
 
+.acf-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+.acf-item {
+  display: flex;
+  align-items: center; /* Vertically centers the items */
+}
+
+.group-1 .acf-item {
+  flex-direction: row; /* Image on the left */
+}
+
+.group-2 .acf-item {
+  flex-direction: row-reverse; /* Image on the right */
+}
+
+.acf-image {
+  margin-right: 20px; /* Adjust spacing as needed */
+}
+
+.acf-text {
+  flex: 1; /* Allows text to take the remaining space */
+}
+
+
+
 /* ---------------------------   OVERIDE JUPITER CSS ---------------------- */
 .parent-pageid-895 .container{
     max-width: 100%;
